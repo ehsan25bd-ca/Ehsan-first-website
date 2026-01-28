@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   
+    <title> Ehsan Ahmed Index</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="valleyFinal.css"></link>
+	
+	
+	<script>
+      
+	  function RFLOCalc(){
+        
+             //alert("here");
+        //var NR =[10000, 1000000,11000];
+        var val1 = parseFloat(document.getElementById("f1").value);
+		var val4 = parseFloat(document.getElementById("f4").value);
+		var val5 = parseFloat(document.getElementById("f5").value);
+		var val6 = parseFloat(document.getElementById("f6").value);
+		var val7 = parseFloat(document.getElementById("f7").value);
+		var val8 = parseFloat(document.getElementById("f8").value);
+		D =(val7+val8)/2;
+		N = (10-(8/((val1/D)+2)))/3;
+		M = 3;
+		R =val4*((1-Math.pow((val5/D),N))/(1-Math.pow((val6/D),M)));
+		L=(val8-val7)/R;
+		<!--);
+		document.getElementById("RFLO").innerHTML = L;
+		}
+		</script>
+	
+	
+  </head>
+  <body>
+    <div id="wrapper">
+      <header class="pageTop">
+        <h1> </h1>
+      </header>
+      <nav id="pseudo">
+        <a href="valleyIndex.html">'Length,'</a>
+        
+        <a href="valleyPricing.html">:Program RFLO;</a>
+        
+      </nav>
+        <main>
+          <h3><p>This 'RFLO' program integrates between two different depths, d1 and d2, and gives the resulting length L between the two depths.  The programs 'TRAP' and 'DCRIT' must be run prior to executing the 'RFLO' program to set up the variables dn and dc.</h3>
+
+            <form name="pricingTool" >
+              
+                
+				<fieldset>
+				<h2>RFLO,Length  <h2>
+				
+				<br/>
+				
+                  b:<input type="text" name="Size1" id="f1"> <br/>
+				  s:<input type="text" name="Size1" id="f4"> <br/>
+				  dn:<input type="text" name="Size1" id="f5"> <br/>
+				  dc:<input type="text" name="Size1" id="f6"> <br/>
+				  d1:<input type="text" name="Size1" id="f7"> <br/>
+				  d2:<input type="text" name="Size1" id="f8"> <br/>
+				  Length is (m) : <div id="RFLO"></div>
+				  <button type="button" onclick="RFLOCalc()">Calculate!</button>
+                </fieldset>
+	        <form/>
+        </main>
+    </div>
+    <footer id="specialChar">
+      &copy; by Ehsan Ahmed, last modified December 6, 2019
+    </footer>
+  </body>
+</html>
