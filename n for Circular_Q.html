@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   
+    <title> Ehsan Ahmed Index</title>
+    
+	<link type="text/css" rel="stylesheet" href="valleyFinal.css"></link>
+	
+	
+	<script>
+      
+	  function NormalDepthCalc(){
+        
+             //alert("here");
+        //var NR =[10000, 1000000,11000];
+        var val1 = parseFloat(document.getElementById("f1").value);
+		var val2 = parseFloat(document.getElementById("f2").value);
+		var val3 = parseFloat(document.getElementById("f3").value);
+		var val4 = parseFloat(document.getElementById("f4").value);
+		var val5 = parseFloat(document.getElementById("f5").value);
+		A = (val4*3.1414/180-Math.sin(val4*3.1414/180))*(Math.pow(val5,2)/8);
+		P = (val4*3.141414/180)*val5/2;
+		R = A/P;
+		N= (A*Math.pow(R,0.66667)*Math.sqrt(val3))/val1;
+		document.getElementById("NormalDepth").innerHTML = N;
+		}
+		</script>
+	
+	
+  </head>
+  <body>
+    
+	<img scr="Images\storagetrailer.jpg" alt="where is my photo"/>
+	<div id="wrapper">
+      <header class="pageTop">
+        <h1> </h1>
+      </header>
+      <nav id="pseudo">
+        <a href="valleyIndex.html">'Manning's n'</a>
+        
+        <a href="valleyPricing.html">:Program "Q";</a>
+        
+      </nav>
+        <main>
+          <h3><p>This program is based on Manning's formula and calculate the Mannning's n (roughness coefficient) of circular channel. 
+<br>
+            
+			<form name="pricingTool" >
+              
+                <img scr="Images\storagetrailer.jpg" alt="where is my photo"/>
+				<fieldset>
+				<h2>Normal Depth:Trapezoidal Channel,dn <h2>
+				
+				<br/>
+				
+                  q:<input type="text" name="Size1" id="f1"> <br/>
+				  n:<input type="text" name="Size1" id="f2"> <br/>		
+				  s:<input type="text" name="Size1" id="f3"> <br/>
+				  theta:<input type="text" name="Size1" id="f4"> <br/>
+				  d:<input type="text" name="Size1" id="f5"> <br/>
+				  Manning's 'n' is : <div id="NormalDepth"></div>
+				  <button type="button" onclick="NormalDepthCalc()">Calculate!</button>
+                </fieldset>
+	        <form/>
+        </main>
+    </div>
+    <footer id="specialChar">
+      &copy; by Ehsan Ahmed, last modified December 6, 2019
+    </footer>
+  </body>
+</html>

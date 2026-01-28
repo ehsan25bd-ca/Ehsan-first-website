@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   
+    <title> Ehsan Ahmed Index</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="valleyFinal.css"></link>
+	<script>
+        
+
+      function FrictionFactor1Calc(){
+        
+             //alert("here");
+        //var FrictionFactor1 =[0.00001200, 22000, 13000];
+        var val1 = parseFloat(document.getElementById("f1").value);
+        var val2 = parseFloat(document.getElementById("f2").value);
+		var val3 = parseFloat(document.getElementById("f3").value);
+		var val4 = parseFloat(document.getElementById("f4").value);
+		
+		FR = ((val1/(3.7*val2))+5.72/(4*val4/(3.1414*val2*val3)));
+		FR1=1/(-2*Math.log10(FR));
+		FR2 =FR1*FR1
+		document.getElementById("FrictionFactor1").innerHTML = FR2;
+		
+
+      }
+    </script>
+	
+	
+    <script>
+     
+      function FrictionFactor2Calc(){
+        
+             //alert("here");
+        //var FrictionFactor1 =[0.00001200, 22000, 13000];
+        var val5 = parseFloat(document.getElementById("f5").value);
+        var val6 = parseFloat(document.getElementById("f6").value);
+		var val3 = parseFloat(document.getElementById("f3").value);
+		var val4 = parseFloat(document.getElementById("f4").value);
+		
+		FR = ((val5/(3.7*val6))+5.72/(4*val4/(3.1414*val6*val3)));
+		FR3 = 1/(-2*Math.log10(FR));
+		FR4 = FR3*FR3;
+		document.getElementById("FrictionFactor2").innerHTML = FR4;
+		
+
+      }
+	  </script>
+
+      <script>
+	  function EnergyEquationCalc(){
+        
+             //alert("here");
+        //var energyEquation =[0.000001200, 2200, 13000];
+        var val2 = parseFloat(document.getElementById("f2").value);
+		var val6 = parseFloat(document.getElementById("f6").value);
+		var val7 = parseFloat(document.getElementById("f7").value);
+		var val4 = parseFloat(document.getElementById("f4").value);
+		var val8 = parseFloat(document.getElementById("f8").value);
+		var val9 = parseFloat(document.getElementById("f9").value);
+		var val10 = parseFloat(document.getElementById("f10").value);
+		var val11 = parseFloat(document.getElementById("f11").value);
+		var val12 = parseFloat(document.getElementById("f12").value);
+		var val13 = parseFloat(document.getElementById("f13").value);
+		var val14 = parseFloat(document.getElementById("f14").value);
+		var val15 = parseInt(document.getElementById("f15").value);
+		var val16 = parseFloat(document.getElementById("f16").value);
+		var val17 = parseFloat(document.getElementById("f17").value);
+		var val18 = parseFloat(document.getElementById("f18").value);
+		var val19 = parseFloat(document.getElementById("f19").value);
+		P1 =(val7-val8)/val9+val19*(val10-val11)-val16;
+		P7 =((val17*val12)/Math.pow(val2,5))+(val14/Math.pow(val2,4));
+		P2 =P7*(8*Math.pow(val4,2)/Math.pow(3.1414,2));
+		P3 =(P1-P2)*Math.pow(3.141414,2)/(8*Math.pow(val4,2));
+		P4=P3-val15/Math.pow(val6,4);
+		P5 =(val18*val13)/P4;
+		P6 =Math.pow(P5,0.2);
+		document.getElementById("UnknownValue").innerHTML = P6;
+      }
+	  
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header class="pageTop">
+        <h1> </h1>
+      </header>
+      <nav id="pseudo">
+        <a href="valleyIndex.html">'PFLO'</a>
+        
+        <a href="valleyPricing.html">PROGRAM (To Solve Energy Equation)</a>
+        
+      </nav>
+        <main>
+          <h3><p>The'PFLO'program solves the energy equation for up to two pipes in series using the Darcy-Weisbach friction formula.
+		  <br> 
+		  <br>
+		    To calculate 'd2', first assume a value of d2 ( say, same as d1) and calculate the friction factors. 
+            Then solve the energy equation for 'd2' to get the required diameter of the pipe.</p></h3>
+            <form name="pricingTool" >
+              <h2>Calculations <h2>
+                
+			<fieldset>
+				<h3>Friction Factor for Pipe 1 <h3>
+				For pipe 1: 1/√f1=-2*Log((ε1/(3.7*d1)+(5.72/(NR^0.9))));
+				<br/>
+				
+                  ε1:<input type="text" name="Size1" id="f1"> <br/>
+				  d1:<input type="text" name="Size1" id="f2"> <br/>
+				  ϑ :<input type="text" name="Size1" id="f3"> <br/>
+				  q :<input type="text" name="Size1" id="f4"> <br/>
+				  
+				  FR is : <div id="FrictionFactor1"></div>
+				  <button type="button" onclick="FrictionFactor1Calc()">Calculate!</button>
+				  
+               </fieldset>
+			   
+			  
+			<fieldset>
+				<h2>Friction Factor for Pipe 2 <h2>
+				For pipe 2: 1/√f1=-2*Log((ε2/(3.7*d2)+(5.72/(NR2^0.9))));
+				<br/>
+				
+                  ε2:<input type="text" name="Size1" id="f5"> <br/>
+				  d2:<input type="text" name="Size1" id="f6"> <br/>
+				  ϑ :<input type="text" name="Size1" id="f3"> <br/>
+				  q :<input type="text" name="Size1" id="f4"> <br/>
+				  
+				  FR is : <div id="FrictionFactor2"></div>
+				  <button type="button" onclick="FrictionFactor2Calc()">Calculate!</button>
+				  
+               </fieldset>			
+
+
+			
+			<fieldset>
+			     <h2>Solving Energy Equations<h2>
+                  Energy Equation: (p1-p2)/ρ+g*(z1-z2)=((f1*l1)/〖d1〗^5 +k1/〖d1〗^4 +(f2*l2)/〖d2〗^5 +k2/〖d2〗^4 )*(8*q^2)/π^2 +w;
+				  <br/>
+                  
+				  p1:<input type="text" name="Size1" id="f7"> <br/>
+				  p2:<input type="text" name="Size1" id="f8"> <br/>
+				  ρ :<input type="number" name="quantity" id = "f9" min="990" max="1000"><br/>
+				  z1:<input type="text" name="Size1" id="f10"> <br/>
+				  z2:<input type="text" name="Size1" id="f11"> <br/>
+				  l1:<input type="text" name="Size1" id="f12"> <br/>
+				  l2:<input type="text" name="Size1" id="f13"> <br/>
+				  d1:<input type="text" name="Size1" id="f2"> <br/>
+				  d2:<input type="text" name="Size1" id="f6"> <br/>
+				  k1:<input type="text" name="Size1" id="f14"> <br/>
+				  k2:<input type="text" name="Size1" id="f15"> <br/>
+				  q :<input type="text" name="Size1" id="f4"> <br/>
+				  w :<input type="text" name="Size1" id="f16"> <br/>
+				  f1:<input type="text" name="Size1" id="f17"> <br/>
+				  f2:<input type="text" name="Size1" id="f18"> <br/>
+				  g:<input type="text" name="Size1" id="f19"> <br/>
+				  
+				  Solving for d2 (m): <div id="UnknownValue"></div>
+				  <button type="button" onclick="EnergyEquationCalc()">Calculate!</button>
+                
+				</fieldset>
+            <form/>
+        </main>
+    </div>
+    <footer id="specialChar">
+      &copy; Ehsan Ahmed, Last Modified Dec 11, 2019
+    </footer>
+  </body>
+</html>

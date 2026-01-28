@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   
+    <title> Ehsan Ahmed Index</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="valleyFinal.css"></link>
+	
+	
+	<script>
+      
+	  function FRCalc(){
+        
+             //alert("here");
+        //var NR =[10000, 1000000,11000];
+        var val1 = parseFloat(document.getElementById("f1").value);
+		var val2 = parseFloat(document.getElementById("f2").value);
+		var val3 = parseFloat(document.getElementById("f3").value);
+		var val4 = parseFloat(document.getElementById("f4").value);
+		FR = (val4)/(val1*Math.pow(val2, 0.5)*Math.pow(val3,1.5));
+		document.getElementById("FroudeNo").innerHTML = FR;
+		}
+		</script>
+	
+	
+  </head>
+  <body>
+    <div id="wrapper">
+      <header class="pageTop">
+        <h1> </h1>
+      </header>
+      <nav id="pseudo">
+        <a href="valleyIndex.html">'Froude No.'</a>
+        
+        <a href="valleyPricing.html">:Program FR;</a>
+        
+      </nav>
+        <main>
+          <h3><p>In open-channel flow, gravity forces predominate and we define the Froude number, NF, as being the ratio of the inertia force to the gravity force in the flow.</h3>
+
+            <form name="pricingTool" >
+              
+                
+				<fieldset>
+				<h2>Froude No. (FR)  <h2>
+				For pipe : FR = q/(b*g^0.5d^1.5);
+				<br/>
+				
+                  b:<input type="text" name="Size1" id="f1"> <br/>
+				  g:<input type="text" name="Size1" id="f2"> <br/>		
+				  d:<input type="text" name="Size1" id="f3"> <br/>
+				  q:<input type="text" name="Size1" id="f4"> <br/>
+				  Froude no. is : <div id="FroudeNo"></div>
+				  <button type="button" onclick="FRCalc()">Calculate!</button>
+                </fieldset>
+	        <form/>
+        </main>
+    </div>
+    <footer id="specialChar">
+      &copy; by Ehsan Ahmed, last modified December 6, 2019
+    </footer>
+  </body>
+</html>

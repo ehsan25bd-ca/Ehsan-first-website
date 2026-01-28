@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   
+    <title> Ehsan Ahmed Index</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="valleyFinal.css"></link>
+	
+	
+	<script>
+      
+	  function JumpCalc(){
+        
+             //alert("here");
+        //var NR =[10000, 1000000,11000];
+        var val1 = parseFloat(document.getElementById("f1").value);
+		var val2 = parseFloat(document.getElementById("f2").value);
+		var val3 = parseFloat(document.getElementById("f3").value);
+		var val4 = parseFloat(document.getElementById("f4").value);
+		d2 = Math.sqrt((2*Math.pow(val4,2))/(Math.pow(val1,2)*val3*val2)+0.25*Math.pow(val3,2))-val3/2;
+		document.getElementById("JumpDepth").innerHTML = d2;
+		}
+		</script>
+	
+	
+  </head>
+  <body>
+    <div id="wrapper">
+      <header class="pageTop">
+        <h1> </h1>
+      </header>
+      <nav id="pseudo">
+        <a href="valleyIndex.html">'Depth after Jump'</a>
+        
+        <a href="valleyPricing.html">:Program Jump;</a>
+        
+      </nav>
+        <main>
+         <h3><p>
+		  <br>
+		    For a rectangular channel, the depth, d2, after the jump can be calculated from momentum considerations if the depth before the jump, d1, and the flow rate, Q, are known.
+			<br>
+			<br>
+			The program is based on the Equation:
+				<img src="Images\DepthafterJumpEq.jpg" alt="Critical Depth Photo" width="200" Height="75"/>
+				<br/>
+			</p></h3>
+			<form name="pricingTool" >
+              
+            <img src="Images\Photo4.jpg" alt="Critical Depth Photo" width="600" Height="350"/>	    
+				<fieldset>
+				<h2>Depth after Jump (d2)  <h2>
+				
+				
+                  b:<input type="text" name="Size1" id="f1"> <br/>
+				  g:<input type="text" name="Size1" id="f2"> <br/>		
+				  d1:<input type="text" name="Size1" id="f3"> <br/>
+				  q:<input type="text" name="Size1" id="f4"> <br/>
+				  Depth after the jump, d2 is : <div id="JumpDepth"></div>
+				  <button type="button" onclick="JumpCalc()">Calculate!</button>
+                </fieldset>
+                   
+		   <form/>
+        </main>
+    </div>
+    <footer id="specialChar">
+      &copy; by Ehsan Ahmed, last modified December 6, 2019
+    </footer>
+  </body>
+</html>

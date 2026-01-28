@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   
+    <title> Ehsan Ahmed Index</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="valleyFinal.css"></link>
+	
+	
+	<script>
+      
+	  function DcritCalc(){
+        
+             //alert("here");
+        //var NR =[10000, 1000000,11000];
+        var val1 = parseFloat(document.getElementById("f1").value);
+		var val2 = parseFloat(document.getElementById("f2").value);
+		var val4 = parseFloat(document.getElementById("f4").value);
+		dc = Math.pow((Math.pow(val4,2)/(val2*Math.pow(val1,2))),0.3333);
+		document.getElementById("CriticalDepth").innerHTML = dc;
+		}
+		</script>
+	
+	
+  </head>
+  <body>
+    <div id="wrapper">
+      <header class="pageTop">
+        <h1> </h1>
+      </header>
+      <nav id="pseudo">
+        <a href="valleyIndex.html">'Critical Depth'</a>
+        
+        <a href="valleyPricing.html">:Program DCRIT;</a>
+        
+      </nav>
+        <main>
+         
+<main>
+          <h3><p>The critical depth, dc, occurs when the specific energy is a minimum. For a given specific energy (other than Ec), there are two possible depths of flow for a given Q.</p></h3>
+            <p> The depth, d1, represents a shallow depth of flow with a high velocity and a steep slope.  More of the energy is in the form of kinetic energy.  Such a flow is known as rapid or supercritical flow.  
+            <p> The other depth, d2, represents a deeper slower depth of flow with a shallow slope.  In this situation, more of the energy is gravitational potential energy.  This type of flow is known as tranquil or subcritical flow.
+			<form name="pricingTool" >
+             <br>
+			 
+            <h3><p> The Program'DCRIT' is based on the following Equation.  It can be used to determine the critical depth in a rectangular channel for a given flow rate.<p>    
+			<img src="Images\DcritEq.jpg" alt="Critical Depth Equation" width="#" Height="#"/>	
+			<br>
+			<img src="Images\Photo3.jpg" alt="Critical Depth Photo" width="350" Height="250"/>
+				<fieldset>
+				<h2>Critical Depth (dc)  <h2>
+				<br/>
+				
+                  b:<input type="text" name="Size1" id="f1"> <br/>
+				  g:<input type="text" name="Size1" id="f2"> <br/>		
+				  Q:<input type="text" name="Size1" id="f4"> <br/>
+				  Critical Depth dc is : <div id="CriticalDepth"></div>
+				  <button type="button" onclick="DcritCalc()">Calculate!</button>
+            
+			</fieldset>
+			<br>
+			 
+			 
+	        <form/>
+        </main>
+    </div>
+   
+	<footer id="specialChar">
+      &copy; by Ehsan Ahmed, last modified December 6, 2019
+    </footer>
+  </body>
+</html>

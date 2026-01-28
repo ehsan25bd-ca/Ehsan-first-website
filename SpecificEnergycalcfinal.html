@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   
+    <title> Ehsan Ahmed Index</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="valleyFinal.css"></link>
+	
+	
+	<script>
+      
+	  function SECalc(){
+        
+             //alert("here");
+        //var NR =[10000, 1000000,11000];
+        var val1 = parseFloat(document.getElementById("f1").value);
+		var val2 = parseFloat(document.getElementById("f2").value);
+		var val3 = parseFloat(document.getElementById("f3").value);
+		var val4 = parseFloat(document.getElementById("f4").value);
+		SE = val3+(Math.pow(val4,2))/(2*val2*Math.pow(val1,2)*Math.pow(val3,2));
+		document.getElementById("SpecificEnergy").innerHTML = SE;
+		}
+		</script>
+	
+	
+  </head>
+  <body>
+    
+	<div id="wrapper">
+      <header class="pageTop">
+        <h1> </h1>
+      </header>
+      <nav id="pseudo">
+        <a href="valleyIndex.html">'Specific Energy'</a>
+        
+        <a href="valleyPricing.html">:Program SE;</a>
+        
+      </nav>
+        <main>
+          <h3><p>The specific energy in an open-channel is defined as the energy head measured with respect to the channel bottom at the section under consideration:
+		<br>
+            
+			<form name="pricingTool" >
+              
+                <img src="Images\SP_Energy.jpg" alt="Specific Energy Photo" width="600" Height="300"/>
+				<h3><p>For Rectangular Channel, the equation for the specific energy is:
+		<br>
+				<img src="Images\SP_EnergyEq.jpg" alt="Specific Energy Photo" width="300" Height="90"/>
+			<fieldset>
+				<h2>Specific Energy,E  <h2>
+				
+                  b:<input type="text" name="Size1" id="f1"> <br/>
+				  g:<input type="text" name="Size1" id="f2"> <br/>		
+				  d:<input type="text" name="Size1" id="f3"> <br/>
+				  Q:<input type="text" name="Size1" id="f4"> <br/>
+				  Specific Energy, E is : <div id="SpecificEnergy"></div>
+				  <button type="button" onclick="SECalc()">Calculate!</button>
+                </fieldset>
+	        <form/>
+        </main>
+    </div>
+    <footer id="specialChar">
+      &copy; by Ehsan Ahmed, last modified December 6, 2019
+    </footer>
+  </body>
+</html>

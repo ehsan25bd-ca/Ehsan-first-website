@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   
+    <title> Aaron Arseneau Index</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="valleyFinal.css"></link>
+	
+	
+	<script>
+      
+	  function NRCalc(){
+        
+             //alert("here");
+        //var NR =[10000, 1000000,11000];
+        var val2 = parseFloat(document.getElementById("f2").value);
+		var val3 = parseFloat(document.getElementById("f3").value);
+		var val4 = parseFloat(document.getElementById("f4").value);
+		NR = (4*val4)/(3.1414*val2*val3);
+		document.getElementById("ReynoldNo1").innerHTML = NR;
+		}
+		</script>
+	
+	
+  </head>
+  <body>
+    <div id="wrapper">
+      <header class="pageTop">
+        <h1> </h1>
+      </header>
+      <nav id="pseudo">
+        <a href="valleyIndex.html">'Reynold No.'</a>
+        
+        <a href="valleyPricing.html">:Program NR;</a>
+        
+      </nav>
+        <main>
+          
+            <form name="pricingTool" >
+              
+                
+				<fieldset>
+				<h2>REYNOLD no. (NR)  <h2>
+				For pipe : NR = 4*q/(3.1414*d1*ϑ);
+				<br/>
+				
+                  d1:<input type="text" name="Size1" id="f2"> <br/>		
+				  ϑ :<input type="text" name="Size1" id="f3"> <br/>
+				  q :<input type="text" name="Size1" id="f4"> <br/>
+				  Reynold no. is : <div id="ReynoldNo1"></div>
+				  <button type="button" onclick="NRCalc()">Calculate!</button>
+                </fieldset>
+	        <form/>
+        </main>
+    </div>
+    <footer id="specialChar">
+      &copy; by Ehsan Ahmed, last modified December 6, 2019
+    </footer>
+  </body>
+</html>

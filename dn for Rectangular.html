@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   
+    <title> Ehsan Ahmed Index</title>
+    
+	<link type="text/css" rel="stylesheet" href="valleyFinal.css"></link>
+	
+	
+	<script>
+      
+	  function NormalDepthCalc(){
+        
+             //alert("here");
+        //var NR =[10000, 1000000,11000];
+        var val1 = parseFloat(document.getElementById("f1").value);
+		var val2 = parseFloat(document.getElementById("f2").value);
+		var val3 = parseFloat(document.getElementById("f3").value);
+		var val4 = parseFloat(document.getElementById("f4").value);
+		<!--var val5 = parseFloat(document.getElementById("f5").value);
+		var val6 = parseFloat(document.getElementById("f6").value);
+		X = Math.pow((val1*val2)/Math.sqrt(val3),1.5);
+		Y= (val4+2*val6)/Math.pow(val4,2.5);
+		Z=X*Y;
+		Dn= Math.pow(Z,0.4);
+		document.getElementById("NormalDepth").innerHTML = Dn;
+		}
+		</script>
+	
+	
+  </head>
+  <body>
+    
+	
+	<div id="wrapper">
+      <header class="pageTop">
+        <h1> </h1>
+      </header>
+      <nav id="pseudo">
+        <a href="valleyIndex.html">'Normal Depth'</a>
+        
+        <a href="valleyPricing.html">:Program TRAP with z=0;</a>
+        
+      </nav>
+        <main>
+          <h3><p>This program is based on Manning's formula and calculate the normal depth of rectangular channel (z=0) . First 'assume' a dn value (say 1m) and then calculate the normal depth. Give one or two trial to get the correct value of normal depth.
+<br>
+            
+			<form name="pricingTool" >
+            
+            <h3> The program is based on the equation:
+			<img src="Images\FlowEq.jpg" alt="Critical Depth Photo" width="#" Height="#"/>
+			<br>
+			<br>
+			<img src="Images\TRAP.jpg" alt="Critical Depth Photo" width="300" Height="200"/>  	
+				<fieldset>
+				<h2>Normal Depth:Rectanular Channel,dn <h2>
+				
+				<br/>
+				
+                  Q:<input type="text" name="Size1" id="f1"> <br/>
+				  n:<input type="text" name="Size1" id="f2"> <br/>		
+				  s:<input type="text" name="Size1" id="f3"> <br/>
+				  b:<input type="text" name="Size1" id="f4"> <br/>
+				  dn:<input type="text" name="Size1" id="f6"> <br/>
+				  Normal Depth, dn is (m) : <div id="NormalDepth"></div>
+				  <button type="button" onclick="NormalDepthCalc()">Calculate!</button>
+                </fieldset>
+	        <form/>
+        </main>
+    </div>
+    <footer id="specialChar">
+      &copy; by Ehsan Ahmed, last modified December 6, 2019
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   
+    <title> Ehsan Ahmed Index</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="valleyFinal.css"></link>
+	
+	<script>
+      
+
+      function FlowCalc(){
+        
+             //alert("here");
+        //var ChannelFlow =[1200, 2200, 1300];
+        var val1 = parseFloat(document.getElementById("f1").value);
+        var val2 = parseFloat(document.getElementById("f2").value);
+		var val3 = parseFloat(document.getElementById("f3").value);
+		var val4 = parseFloat(document.getElementById("f4").value);
+		var val5 = parseFloat(document.getElementById("f5").value);
+		A = (val1+val2*val3)*val3;
+		P =val1+2*val3*(Math.sqrt(1+val2*val2));
+		R=A/P;
+		Q =(1/val4)*A*(Math.pow(R,0.6667))*(Math.sqrt(val5));
+		document.getElementById("ChannelFlow").innerHTML = Q;
+      }
+    </script>
+    
+  </head>
+  <body>
+    <div id="wrapper">
+      <header class="pageTop">
+        <h1>Open Channel Flow of ARET 3400</h1>
+      </header>
+      <nav id="pseudo">
+        <a href="valleyIndex.html">'TRAP'</a>
+        
+        <a href="valleyPricing.html">PROGRAM (To Solve Manning's Equation)</a>
+        
+      </nav>
+        <main>
+          <h2><p>The'TRAP'program solves Manning's equation to find the flow/normal depth/side slope/bed slope of rectangular channel.  
+                 Insert the value of the variables from the list and then solve for the unknown variable.</p></h2>
+            <form name="pricingTool" >
+                             
+			   <fieldset>
+				<img src="Images\TRAP.jpg" alt="Critical Depth Photo" width="250" Height="200"/>
+				<img src="Images\FlowEq.jpg" alt="Critical Depth Photo" width="200" Height="75"/>
+				<h2>Flow for Open Channel <h2>
+				Flow: Q=1/n AR^2/3S^1/2;
+				<br/>
+				
+                  b:<input type="text" name="Size1" id="f1"> <br/>
+				  z:<input type="text" name="Size1" id="f2"> <br/>
+				  dn:<input type="text" name="Size1" id="f3"> <br/>
+				  n :<input type="text" name="Size1" id="f4"> <br/>
+				  s :<input type="text" name="Size1" id="f5"> <br/>
+				   
+				Flow, Q is : <div id="ChannelFlow"></div>
+				<button type="button" onclick="FlowCalc()">Calculate!</button>
+				  
+				</fieldset>				  
+			
+               
+            <form/>
+        </main>
+    </div>
+    <footer id="specialChar">
+      &copy; Ehsan Ahmed, last modified December 13, 2019
+    </footer>
+  </body>
+</html>
