@@ -18,7 +18,7 @@
 		var val3 = parseFloat(document.getElementById("f3").value);
 		var val4 = parseFloat(document.getElementById("f4").value);
 		
-		FR = ((val1/(3.7*val2))+5.72/(4*val4/(3.1414*val2*val3)));
+		FR = ((val1/(3.7*val2))+5.72/(4*val4/(3.141592654*val2*val3)));
 		FR1=1/(-2*Math.log10(FR));
 		FR2 =FR1*FR1
 		document.getElementById("FrictionFactor1").innerHTML = FR2;
@@ -39,7 +39,7 @@
 		var val3 = parseFloat(document.getElementById("f3").value);
 		var val4 = parseFloat(document.getElementById("f4").value);
 		
-		FR = ((val5/(3.7*val6))+5.72/(4*val4/(3.1414*val6*val3)));
+		FR = ((val5/(3.7*val6))+5.72/(4*val4/(3.141592654*val6*val3)));
 		FR3 = 1/(-2*Math.log10(FR));
 		FR4 = FR3*FR3;
 		document.getElementById("FrictionFactor2").innerHTML = FR4;
