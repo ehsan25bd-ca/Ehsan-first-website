@@ -67,8 +67,9 @@
 		var val13 = parseFloat(document.getElementById("f13").value);
 		P1 =(((val12*val7)/val2)+val9);
 		P2 =((val13*val8)/val6)+val10;
-		P3 =(P1/P2)*Math.pow((val6/val2),4)*Math.pow(val11,2);
-		P4 =Math.sqrt(P3);		
+		P3 =(P1/P2)*Math.pow((val6/val2),4);
+		P5= Math.sqrt(P3);
+		P4 =val11/(1+P5);		
 		document.getElementById("UnknownValue").innerHTML = P4;
       }
 	  
@@ -146,7 +147,7 @@
 				  f1:<input type="text" name="Size1" id="f12"> <br/>
 				  f2:<input type="text" name="Size1" id="f13"> <br/>
 				  				  
-				  Solving for Q2 (m3/s): <div id="UnknownValue"></div>
+				  Solving for Q1 (m3/s): <div id="UnknownValue"></div>
 				  <button type="button" onclick="EnergyEquationCalc()">Calculate!</button>
                 
 				</fieldset>
