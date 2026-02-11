@@ -40,10 +40,12 @@
         var val6 = parseFloat(document.getElementById("f6").value);
 		var val3 = parseFloat(document.getElementById("f3").value);
 		var val4 = parseFloat(document.getElementById("f4").value);
-		
-		FR = ((val5/(3.7*val6))+5.72/(4*val4/(3.1414*val6*val3)));
-		FR3 = 1/(-2*Math.log10(FR));
+		NR2 = 4*val4/(3.141592654*val6*val3);
+		NR3 = Math.pow(NR2,0.9);  
+		FR5 = ((val5/(3.7*val6))+5.72/NR3);
+		FR3 = 1/(-2*Math.log10(FR5));
 		FR4 = FR3*FR3;
+		
 		document.getElementById("FrictionFactor2").innerHTML = FR4;
 		
 
