@@ -18,7 +18,7 @@
 		var val3 = parseFloat(document.getElementById("f3").value);
 		var val11 = parseFloat(document.getElementById("f11").value);
 		
-		FR = ((val1/(3.7*val2))+5.72/(Math.pow(4*val11/(3.141592654*val2*val3)),0.9));
+		FR = ((val1/(3.7*val2))+5.72/(4*val11/(3.141592654*val2*val3)));
 		FR1=1/(-2*Math.log10(FR));
 		FR2 =FR1*FR1
 		document.getElementById("FrictionFactor1").innerHTML = FR2;
